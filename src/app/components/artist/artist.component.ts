@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-artist',
@@ -8,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtistComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: ActivatedRoute) {
+    
+    this._router.params.subscribe(params => {
+      console.log(params['id'])
+    })
+   }
+
 
   ngOnInit(): void {
   }
