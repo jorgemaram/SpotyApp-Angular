@@ -10,7 +10,7 @@ export class SpotifyService {
 
   constructor(private _http: HttpClient) {
 
-    console.log('Spotify listo')
+    console.log('SpotifApp is ready')
   }
 
   getQuery(query: string) {
